@@ -1,0 +1,15 @@
+body {
+  text-align: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("https://wallpapercave.com/wp/wp6726042.jpg");
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+html {
+  scroll-behavior: smooth;
+}

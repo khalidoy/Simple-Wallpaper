@@ -1,0 +1,34 @@
+.bn3637 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: rgb(113, 218, 139);
+  backface-visibility: hidden;
+  border: 0.3rem solid transparent;
+  border-style: ridge;
+  border-radius: 3rem;
+  margin-top: 20px;
+}
+
+.bn37 {
+  border-color: transparent;
+  background-color: rgb(90, 240, 153);
+  color: rgb(48, 11, 11);
+  transition: transform 0.5s cubic-bezier(0.235, 0, 0.05, 0.95);
+  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
+  font-family: Snell Roundhand, cursive;
+}
+
+.bn37:hover {
+  transform: perspective(1px) scale3d(1.1, 1.1, 1) translateZ(0) !important;
+  cursor: pointer;
+}
+
+.table {
+  display: inline-block;
+}

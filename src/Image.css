@@ -1,0 +1,58 @@
+.imgBigDiv {
+  width: 55%;
+  height: 700px;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: #333333;
+  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
+  margin: 0 auto;
+  margin-top: 90px;
+}
+.imgBigDiv:hover {
+  cursor: pointer;
+}
+
+.img {
+  width: 100%;
+  height: 90%;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.5s cubic-bezier(0.235, 0, 0.05, 0.95);
+  border-style: none;
+  background-image: url("https://c.tenor.com/I6kN-6X7nhAAAAAi/loading-buffering.gif");
+  background-repeat: no-repeat;
+}
+
+.img:hover {
+  transform: perspective(1px) scale3d(1.03, 1.03, 1.03) translateZ(0) !important;
+}
+
+.donwloadBTN {
+  height: 38px;
+  font-family: Roundhand, cursive;
+  font-size: 30px;
+  font-weight: 400px;
+  text-align: center;
+  color: #030303;
+  background-color: rgba(79, 255, 167, 0.781);
+  border-radius: 10px;
+  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
+  padding: 5px;
+}
+
+.donwloadBTN:hover {
+  background-color: #85ff90;
+}
+
+hr {
+  width: 100% !important;
+  margin-top: 5%;
+  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #080808);
+  height: 2px;
+  background-color: #000000;
+  border-radius: 50px;
+  text-align: center;
+}
