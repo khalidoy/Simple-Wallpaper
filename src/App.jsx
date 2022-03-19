@@ -12,7 +12,7 @@ class App extends React.Component {
     listOfImageSources: [],
     DownloadLink: "",
     title: "",
-    domainName: "http://192.168.100.32:1000/",
+    domainName: "https://fast-ocean-30157.herokuapp.com/",
   };
 
   componentDidMount = () => {
