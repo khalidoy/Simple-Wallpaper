@@ -1,5 +1,6 @@
 import React from "react";
 import "./MovieCard.css";
+
 class MovieCard extends React.Component {
   render() {
     return (

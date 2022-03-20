@@ -4,6 +4,7 @@ import MovieCard from "./MovieCard";
 import Button from "./Button";
 import "./App.css";
 import Image from "./Image";
+import CategorieBar from "./CategorieBar";
 
 class App extends React.Component {
   state = {
@@ -106,11 +107,113 @@ class App extends React.Component {
           handleClick={this.getJsonList}
           query={this.state.searchedValue}
         />
+        <br />
+        <CategorieBar
+          categorieName="cars"
+          onClick={() => this.getJsonList("cars")}
+        />
+        <CategorieBar
+          categorieName="animals"
+          onClick={() => {
+            this.getJsonList("animals");
+          }}
+        />
+        <CategorieBar
+          categorieName="anime"
+          onClick={() => this.getJsonList("anim")}
+        />
+        <CategorieBar
+          categorieName="brands"
+          onClick={() => this.getJsonList("brands")}
+        />
+        <CategorieBar
+          categorieName="cartoons"
+          onClick={() => this.getJsonList("cartoons")}
+        />
+
+        <CategorieBar
+          categorieName="celebrities"
+          onClick={() => this.getJsonList("celebrities")}
+        />
+
+        <CategorieBar
+          categorieName="devices"
+          onClick={() => this.getJsonList("devices")}
+        />
+        <CategorieBar
+          categorieName="games"
+          onClick={() => this.getJsonList("games")}
+        />
+        <CategorieBar
+          categorieName="movies"
+          onClick={() => this.getJsonList("movies")}
+        />
+        <CategorieBar
+          categorieName="music"
+          onClick={() => this.getJsonList("music")}
+        />
+        <CategorieBar
+          categorieName="geography"
+          onClick={() => this.getJsonList("geography")}
+        />
+        <CategorieBar
+          categorieName="motor"
+          onClick={() => this.getJsonList("motor")}
+        />
+
+        <CategorieBar
+          categorieName="nature"
+          onClick={() => this.getJsonList("nature")}
+        />
+        <CategorieBar
+          categorieName="other"
+          onClick={() => this.getJsonList("other")}
+        />
+        <CategorieBar
+          categorieName="pokemon"
+          onClick={() => this.getJsonList("pokemon")}
+        />
+        <CategorieBar
+          categorieName="art"
+          onClick={() => this.getJsonList("art")}
+        />
+        <CategorieBar
+          categorieName="4K"
+          onClick={() => this.getJsonList("4K")}
+        />
+        <CategorieBar
+          categorieName="religion"
+          onClick={() => this.getJsonList("religion")}
+        />
+        <CategorieBar
+          categorieName="resolutions"
+          onClick={() => this.getJsonList("resolutions")}
+        />
+        <CategorieBar
+          categorieName="space"
+          onClick={() => this.getJsonList("space")}
+        />
+        <CategorieBar
+          categorieName="sports"
+          onClick={() => this.getJsonList("sports")}
+        />
+        <CategorieBar
+          categorieName="superheroes"
+          onClick={() => this.getJsonList("superheroes")}
+        />
+        <CategorieBar
+          categorieName="tv Shows"
+          onClick={() => this.getJsonList("tvshows")}
+        />
+        <CategorieBar
+          categorieName="iphone"
+          onClick={() => this.getJsonList("iphone")}
+        />
 
         <div className="app">
           <MovieCard
             data={this.state.list}
-            handleClick={this.getJsonListOfImages}
+            handleClick={() => this.getJsonListOfImages}
           />
         </div>
         <h1 id="titleOfSearch">

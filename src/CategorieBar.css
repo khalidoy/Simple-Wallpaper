@@ -1,0 +1,16 @@
+.categorieClass {
+  display: inline-block;
+  margin-right: 1%;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: aquamarine;
+  border-radius: 20px;
+  padding: 5px;
+  margin-top: 20px;
+  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
+}
+
+.categorieClass:hover {
+  background-color: rgb(255, 255, 255);
+  transform: perspective(1px) scale3d(1.1, 1.1, 1) translateZ(0) !important;
+}
