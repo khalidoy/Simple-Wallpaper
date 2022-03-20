@@ -55,7 +55,7 @@ class App extends React.Component {
     return (
       <div>
         <div className="header">
-          <p className="about">by khalidoy yakhloufi</p>
+          <p className="about">by khalid yakhloufi</p>
           <div className="contact" id="social-platforms">
             <a
               class="btn btn-icon btn-facebook"

@@ -44,6 +44,7 @@ h1:hover {
   border-radius: 20px;
   filter: invert(100%);
   transition: transform 0.5s cubic-bezier(0.235, 0, 0.05, 0.95);
+  margin-bottom: 2%;
 }
 .search__input:hover {
   transform: perspective(3px) scale3d(1.05, 1.05, 1) translateZ(0) !important;

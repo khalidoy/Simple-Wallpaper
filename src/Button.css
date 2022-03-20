@@ -1,18 +1,12 @@
 .bn3637 {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.7rem 2rem;
+  padding: 0.5%;
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  text-align: center;
+  font-size: 110%;
   color: rgb(113, 218, 139);
-  backface-visibility: hidden;
-  border: 0.3rem solid transparent;
-  border-style: ridge;
-  border-radius: 3rem;
-  margin-top: 20px;
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-bottom: 2%;
 }
 
 .bn37 {
