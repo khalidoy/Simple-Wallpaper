@@ -6,9 +6,7 @@ class CategorieBar extends React.Component {
   render() {
     return (
       <div className="categorieClass">
-        <a href="null" onClick={this.props.onClick}>
-          {this.props.categorieName}
-        </a>
+        <a onClick={this.props.onClick}>{this.props.categorieName}</a>
       </div>
     );
   }

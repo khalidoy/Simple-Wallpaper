@@ -11,6 +11,9 @@
   -ms-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
   transform: perspective(3px) scale3d(1.05, 1.05, 1) translateZ(0) !important;
+  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #2bff00);
+
+  cursor: pointer;
 }
 .title {
   width: 136.36720275878906px;
@@ -19,7 +22,9 @@
   font-size: 20px;
   padding-bottom: 40px;
   font-weight: 400;
-  color: #000000;
+  color: #ffffff;
+  text-decoration: wavy;
+  filter: drop-shadow(10.071067811865475px 10.0710678118654755px 5px #000000);
 }
 a:link {
   text-decoration: none;

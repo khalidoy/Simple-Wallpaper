@@ -17,7 +17,7 @@ class App extends React.Component {
   };
 
   componentDidMount = () => {
-    this.getJsonList("art");
+    this.getJsonList("latest");
     var myfn = this.getJsonList;
     var input = document.getElementById("myInput");
     input.addEventListener("keyup", function (e) {
@@ -88,13 +88,18 @@ class App extends React.Component {
             </a>
           </div>
         </div>
-        {this.state.list.length > 1 ? (
-          <div>
-            <h1>Simple Wallpaper</h1>
-          </div>
-        ) : (
-          <h1>Search a wallpaper ...</h1>
-        )}
+
+        <img
+          className="websiteTitle"
+          src="https://images.cooltext.com/5590762.png"
+          width="738"
+          height="104"
+          alt="Simple Wallpaper"
+        />
+
+        <br />
+
+        <br />
         <input
           type="text"
           id="myInput"
@@ -130,12 +135,11 @@ class App extends React.Component {
           categorieName="cartoons"
           onClick={() => this.getJsonList("cartoons")}
         />
-
         <CategorieBar
           categorieName="celebrities"
+          z
           onClick={() => this.getJsonList("celebrities")}
         />
-
         <CategorieBar
           categorieName="devices"
           onClick={() => this.getJsonList("devices")}
@@ -157,10 +161,9 @@ class App extends React.Component {
           onClick={() => this.getJsonList("geography")}
         />
         <CategorieBar
-          categorieName="motor"
-          onClick={() => this.getJsonList("motor")}
+          categorieName="art"
+          onClick={() => this.getJsonList("art")}
         />
-
         <CategorieBar
           categorieName="nature"
           onClick={() => this.getJsonList("nature")}
@@ -202,24 +205,23 @@ class App extends React.Component {
           onClick={() => this.getJsonList("superheroes")}
         />
         <CategorieBar
-          categorieName="tv Shows"
+          categorieName="tvShows"
           onClick={() => this.getJsonList("tvshows")}
         />
         <CategorieBar
           categorieName="iphone"
           onClick={() => this.getJsonList("iphone")}
         />
-
+        <hr />
         <div className="app">
           <MovieCard
             data={this.state.list}
-            handleClick={() => this.getJsonListOfImages}
+            handleClick={this.getJsonListOfImages}
           />
         </div>
         <h1 id="titleOfSearch">
           {this.state.title.replace(/-/g, " ").replace("/", "")}{" "}
         </h1>
-
         {this.state.listOfImageSources.map((image) => {
           let link = image.replace("https://wallpapercave.com/w/", "");
           link = link.replace(".jpg", "");

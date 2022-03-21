@@ -24,6 +24,7 @@
   transition: transform 0.5s cubic-bezier(0.235, 0, 0.05, 0.95);
   border-style: none;
   background-image: url("https://c.tenor.com/I6kN-6X7nhAAAAAi/loading-buffering.gif");
+  background-position: center;
   background-repeat: no-repeat;
 }
 
