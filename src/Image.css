@@ -1,7 +1,6 @@
 .imgBigDiv {
   width: 95%;
   height: 850px;
-
   font-family: Arial;
   font-size: 14px;
   font-weight: 400;
@@ -11,22 +10,24 @@
   margin: 0 auto;
   margin-top: 90px;
 }
+
 .imgBigDiv:hover {
   cursor: pointer;
 }
 
 .img {
-  width: 100%;
+  width: 70%;
   height: 90%;
   border-radius: 20px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   transition: transform 0.5s cubic-bezier(0.235, 0, 0.05, 0.95);
   border-style: none;
   background-image: url("https://c.tenor.com/I6kN-6X7nhAAAAAi/loading-buffering.gif");
   background-position: center;
   background-size: 15%;
   background-repeat: no-repeat;
+  border: solid;
 }
 
 .img:hover {
@@ -34,28 +35,104 @@
 }
 
 .donwloadBTN {
-  height: 38px;
-  font-family: Roundhand, cursive;
   font-size: 30px;
   font-weight: 400px;
-  text-align: center;
   color: #030303;
-  background-color: rgba(79, 255, 167, 0.781);
+  background-color: rgba(255, 255, 255, 0.658);
   border-radius: 10px;
   filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
-  padding: 5px;
+  padding: 0.5%;
+  margin: 0 auto;
+  border: solid;
+  border-width: 2px;
 }
 
 .donwloadBTN:hover {
-  background-color: #85ff90;
+  background-color: #ffffff;
+  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 10px #ffffff);
 }
 
 hr {
   width: 100% !important;
   margin-top: 5%;
   filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #080808);
-  height: 2px;
+  height: 0.5px;
   background-color: #000000;
   border-radius: 50px;
   text-align: center;
+}
+
+.likeIcon {
+  width: 1.5%;
+  height: 3%;
+  margin-left: 5.5%;
+  margin-right: 1%;
+}
+
+.author {
+  margin-right: 5%;
+  font-size: 90%;
+  border: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  padding: 2px;
+}
+
+.imageMetaData {
+  text-align: center;
+  margin: 0 auto;
+}
+@media screen and (max-width: 375px) {
+  .author {
+    font-size: 100%;
+    display: block;
+    align-self: auto;
+    border: solid;
+    border-width: 1px;
+    margin: 0 auto;
+    margin-bottom: 5%;
+  }
+  .likeIcon {
+    width: 5%;
+    height: 3%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5%;
+  }
+  .donwloadBTN {
+    font-size: 150%;
+    color: #030303;
+    background-color: rgba(255, 255, 255, 0.658);
+    border-radius: 20px;
+    filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
+    padding: 1%;
+    margin: 0 auto;
+    border: solid;
+    border-width: 2px;
+  }
+
+  .img {
+    width: 100%;
+    height: 90%;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-style: none;
+    background-image: url("https://c.tenor.com/I6kN-6X7nhAAAAAi/loading-buffering.gif");
+    background-position: center;
+    background-size: 15%;
+    background-repeat: no-repeat;
+    border: solid;
+  }
+  .imgBigDiv {
+    width: 98%;
+    height: 850px;
+    font-family: Arial;
+    font-size: 14px;
+    text-align: center;
+    color: #333333;
+    filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
+    margin: 0 auto;
+    margin-top: 130px;
+  }
 }

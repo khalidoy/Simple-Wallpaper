@@ -4,6 +4,8 @@
   border-radius: 15px;
   padding-right: 10px;
   margin: 6px;
+  border: solid;
+  border-width: 1px;
 }
 .myCard:hover {
   background-color: hsla(96, 100%, 82%, 0.801);
@@ -22,7 +24,7 @@
   font-size: 20px;
   padding-bottom: 40px;
   font-weight: 400;
-  color: #ffffff;
+  color: #000000;
   text-decoration: wavy;
   filter: drop-shadow(10.071067811865475px 10.0710678118654755px 5px #000000);
 }
@@ -35,4 +37,33 @@ a:link {
   height: 120px;
   border-radius: 20px;
   filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
+}
+
+@media screen and (max-width: 375px) {
+  .myCard {
+    background-color: rgba(255, 255, 255, 0.219);
+    border-radius: 15px;
+    padding-right: 10px;
+    margin: 6px;
+    width: 100px;
+    border: solid;
+    border-width: 1px;
+  }
+  .categorieDivIMG {
+    width: 90px;
+    height: 70px;
+    border-radius: 20px;
+    filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
+  }
+  .title {
+    width: 20.36720275878906%;
+    height: 10px;
+    font-family: Corbel;
+    font-size: 20px;
+    padding-bottom: 30px;
+    color: #000000;
+    text-decoration: wavy;
+    filter: drop-shadow(10.071067811865475px 10.0710678118654755px 5px #000000);
+    margin-left: 4px;
+  }
 }

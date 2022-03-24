@@ -10,11 +10,13 @@ class App extends React.Component {
   state = {
     categories: [
       {
-        name: "cars",
-        imghref: "https://i.insider.com/592f4169b74af41b008b5977?width=700",
+        name: "Cartoon",
+        imghref:
+          "https://images.unsplash.com/photo-1620336655055-088d06e36bf0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGNhcnRvb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
       },
+
       {
-        name: "nature",
+        name: "Nature",
         imghref:
           "https://img.freepik.com/photos-gratuite/prise-vue-au-grand-angle-seul-arbre-poussant-sous-ciel-assombri-pendant-coucher-soleil-entoure-herbe_181624-22807.jpg",
       },
@@ -24,15 +26,70 @@ class App extends React.Component {
         imghref:
           "https://images.unsplash.com/photo-1492760864391-753aaae87234?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
       },
+
+      {
+        name: "texture and patterns wallpapers",
+        imghref:
+          "https://images.unsplash.com/photo-1647092076255-6c9e7b773ea2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDYzfGlVSXNuVnRqQjBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "backrounds",
+        imghref:
+          "https://images.unsplash.com/photo-1499088513455-78ed88b7a5b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      },
       {
         name: "color wallpaper",
         imghref:
           "https://media.istockphoto.com/photos/colored-powder-explosion-on-white-background-picture-id1132442970?b=1&k=20&m=1132442970&s=170667a&w=0&h=qZU1t7UPVUZanRUaPIrTa0IJejHGrNQldpWTl_v92M0=",
       },
       {
-        name: "Hd company wallpaper",
+        name: "3D render",
+        imghref:
+          "https://images.unsplash.com/photo-1647351408678-7ce4759a9c1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI0fENEd3V3WEpBYkV3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "Hd wallpaper",
         imghref:
           "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "Black",
+        imghref:
+          "https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGJsYWNrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "cars wallpaper",
+        imghref: "https://i.insider.com/592f4169b74af41b008b5977?width=700",
+      },
+      {
+        name: "Red",
+        imghref:
+          "https://images.unsplash.com/photo-1530128051436-3ab3663a4683?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHJlZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "Text",
+        imghref:
+          "https://images.unsplash.com/photo-1554290712-e640351074bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjN8fHRleHR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "Food wallpaper",
+        imghref:
+          "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGZvb2QlMjB3YWxscGFwZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "Blur wallpaper",
+        imghref:
+          "https://images.unsplash.com/photo-1517842187497-033b8b8cea1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Ymx1ciUyMHdhbGxwYXBlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "Quotes wallpaper",
+        imghref:
+          "https://images.unsplash.com/photo-1543616991-75a2c125ff5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHF1b3RlcyUyMHdhbGxwYXBlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "indie wallpaper",
+        imghref:
+          "https://images.unsplash.com/photo-1529912626516-e58b23f44f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTV8fGluZGllJTIwd2FsbHBhcGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       },
       {
         name: "animals",
@@ -45,7 +102,7 @@ class App extends React.Component {
           "https://media.istockphoto.com/photos/circle-audio-wave-picture-id1305272283?b=1&k=20&m=1305272283&s=170667a&w=0&h=D0Xv0LkCtWtWGGCJSRtfNYc3PxylaSFi_VS1GMhcduk=",
       },
       {
-        name: "HD awesome wallpapers",
+        name: "wallpapers",
         imghref:
           "https://images.unsplash.com/photo-1551505593-8b841137e9ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTB8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       },
@@ -63,6 +120,11 @@ class App extends React.Component {
         name: "space",
         imghref:
           "https://media.istockphoto.com/photos/background-of-galaxy-and-stars-picture-id1035676256?b=1&k=20&m=1035676256&s=170667a&w=0&h=NOtiiFfDhhUhZgQ4wZmHPXxHvt3RFVD-lTmnWCeyIG4=",
+      },
+      {
+        name: "poster",
+        imghref:
+          "https://images.unsplash.com/photo-1588438621836-9d7f88b0cd96?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHBvc3RlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
       },
     ],
     searchedValue: "",
@@ -120,6 +182,37 @@ class App extends React.Component {
   handleNextPage = async () => {
     if (this.state.pageIncrementer < this.state.totalPages) {
       var nextPage = this.state.pageIncrementer + 1;
+      var newApiUrl =
+        "https://api.unsplash.com/search/photos?client_id=WVMhgChtZLtfoKzyyOcdoIljo-qswtWcg7vPYCq0R-A&page=" +
+        nextPage +
+        "&per_page=30&query=" +
+        this.state.mainQuery;
+
+      let res = await await (await axios.get(newApiUrl)).data;
+      this.setState({
+        listOfImageSources: res.results,
+        pageIncrementer: nextPage,
+        title:
+          "showing " +
+          res.total +
+          " results of " +
+          this.state.mainQuery +
+          " ( " +
+          res.total_pages +
+          "pages ) (page " +
+          nextPage +
+          ")",
+      });
+      var Y = document.getElementById("titleOfSearch").offsetTop;
+      window.scrollTo(0, Y);
+    } else {
+      this.setState({ pageIncrementer: 0 });
+    }
+  };
+
+  handlePreviousPage = async () => {
+    if (this.state.pageIncrementer > 1) {
+      var nextPage = this.state.pageIncrementer - 1;
       var newApiUrl =
         "https://api.unsplash.com/search/photos?client_id=WVMhgChtZLtfoKzyyOcdoIljo-qswtWcg7vPYCq0R-A&page=" +
         nextPage +
@@ -220,19 +313,32 @@ class App extends React.Component {
         {this.state.listOfImageSources.map((imageObj) => {
           let imgHref = imageObj.urls.regular;
           let downloadLink = imageObj.links.html + "/download?force=true";
+          let likes = imageObj.likes;
+          let author = imageObj.user.name;
 
           return (
             <div>
-              <Image src={imgHref} download={downloadLink} />
+              <Image
+                src={imgHref}
+                download={downloadLink}
+                likes={likes}
+                author={author}
+              />
             </div>
           );
         })}
+        <br />
+        {/* //////////////////////////////// prev page button ////////////////////////////////////////////////*/}
+        <button className="UpBtn" onClick={this.handlePreviousPage}>
+          Previous page
+        </button>
         {/* //////////////////////////////// scroll up button ////////////////////////////////////////////////*/}
         <button className="UpBtn" onClick={this.handleUpClick}>
           Scroll Up
         </button>
+        {/* //////////////////////////////// next page button ////////////////////////////////////////////////*/}
         <button className="UpBtn" onClick={this.handleNextPage}>
-          next page
+          Next page
         </button>
       </div>
     );
