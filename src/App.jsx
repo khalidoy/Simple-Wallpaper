@@ -55,7 +55,7 @@ class App extends React.Component {
           "https://images.unsplash.com/photo-1431440869543-efaf3388c585?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
       },
       {
-        name: "iphone",
+        name: "iphone wallpaper",
         imghref:
           "https://images.unsplash.com/photo-1547496832-84e64458210a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
       },
