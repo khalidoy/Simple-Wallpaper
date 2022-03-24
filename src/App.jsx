@@ -309,6 +309,8 @@ class App extends React.Component {
         </div>
         {/* //////////////////////////////// title of search  ////////////////////////////////////////////////*/}
         <h1 id="titleOfSearch">{this.state.title}</h1>
+        <br />
+        <br />
         <a
           className="enjoy"
           href="https://khalidoy.github.io/Simple-Wallpaper/"

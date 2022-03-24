@@ -197,7 +197,7 @@ h1:hover {
   font-size: 200%;
   border: solid;
   border-radius: 50px;
-  padding: 20px;
+  padding: 10px;
 }
 .enjoy:hover {
   filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #000000);
@@ -224,7 +224,6 @@ h1:hover {
   h1 {
     text-align: center;
     margin: 0 auto;
-    margin-top: 20px;
     font-size: 95%;
     width: 95%;
     color: #000000e8;
