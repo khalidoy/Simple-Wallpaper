@@ -8,17 +8,76 @@ import CategorieBar from "./CategorieBar";
 
 class App extends React.Component {
   state = {
-    list: [],
+    categories: [
+      {
+        name: "cars",
+        imghref: "https://i.insider.com/592f4169b74af41b008b5977?width=700",
+      },
+      {
+        name: "nature",
+        imghref:
+          "https://img.freepik.com/photos-gratuite/prise-vue-au-grand-angle-seul-arbre-poussant-sous-ciel-assombri-pendant-coucher-soleil-entoure-herbe_181624-22807.jpg",
+      },
+      { name: "art", imghref: "https://wallpaperaccess.com/full/1151322.jpg" },
+      {
+        name: "android wallpapers",
+        imghref:
+          "https://images.unsplash.com/photo-1492760864391-753aaae87234?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "color wallpaper",
+        imghref:
+          "https://media.istockphoto.com/photos/colored-powder-explosion-on-white-background-picture-id1132442970?b=1&k=20&m=1132442970&s=170667a&w=0&h=qZU1t7UPVUZanRUaPIrTa0IJejHGrNQldpWTl_v92M0=",
+      },
+      {
+        name: "Hd company wallpaper",
+        imghref:
+          "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "animals",
+        imghref:
+          "https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "cool wallpapers",
+        imghref:
+          "https://media.istockphoto.com/photos/circle-audio-wave-picture-id1305272283?b=1&k=20&m=1305272283&s=170667a&w=0&h=D0Xv0LkCtWtWGGCJSRtfNYc3PxylaSFi_VS1GMhcduk=",
+      },
+      {
+        name: "HD awesome wallpapers",
+        imghref:
+          "https://images.unsplash.com/photo-1551505593-8b841137e9ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTB8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "desktop wallpapers",
+        imghref:
+          "https://images.unsplash.com/photo-1431440869543-efaf3388c585?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "iphone",
+        imghref:
+          "https://images.unsplash.com/photo-1547496832-84e64458210a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "space",
+        imghref:
+          "https://media.istockphoto.com/photos/background-of-galaxy-and-stars-picture-id1035676256?b=1&k=20&m=1035676256&s=170667a&w=0&h=NOtiiFfDhhUhZgQ4wZmHPXxHvt3RFVD-lTmnWCeyIG4=",
+      },
+    ],
     searchedValue: "",
     listOfImageSources: [],
-    DownloadLink: "",
     title: "",
-    domainName: "https://fast-ocean-30157.herokuapp.com/",
+    mainQuery: "",
+    totalResults: 0,
+    totalPages: 0,
+    pageIncrementer: 1,
+    apiUrlCall:
+      "https://api.unsplash.com/search/photos?client_id=WVMhgChtZLtfoKzyyOcdoIljo-qswtWcg7vPYCq0R-A&page=1&per_page=30&query=",
   };
 
   componentDidMount = () => {
-    this.getJsonList("latest");
-    var myfn = this.getJsonList;
+    var myfn = this.getJsonListOfImages;
     var input = document.getElementById("myInput");
     input.addEventListener("keyup", function (e) {
       if (e.code === "Enter") {
@@ -27,19 +86,23 @@ class App extends React.Component {
     });
   };
 
-  getJsonList = async (query) => {
-    let res = await (await axios.get(this.state.domainName + query)).data;
-    this.setState({ list: res });
-  };
-
   getJsonListOfImages = async (query) => {
-    let res = await (
-      await axios.get(this.state.domainName + "clickedDiv=" + query)
-    ).data;
+    let res = await await (await axios.get(this.state.apiUrlCall + query)).data;
+    console.log(res);
     this.setState({
-      listOfImageSources: res,
-      DownloadLink: "https://wallpapercave.com/download" + query + "-",
-      title: query,
+      listOfImageSources: res.results,
+      mainQuery: query,
+      pageIncrementer: 1,
+      title:
+        "showing " +
+        res.total +
+        " results of " +
+        query +
+        " ( " +
+        res.total_pages +
+        "pages ) (page 1)",
+      totalResults: res.total,
+      totalPages: res.total_pages,
     });
     var Y = document.getElementById("titleOfSearch").offsetTop;
     window.scrollTo(0, Y);
@@ -49,9 +112,42 @@ class App extends React.Component {
     const value = e.target.value;
     this.setState({ searchedValue: value });
   };
+
   handleUpClick = () => {
     window.scroll(0, 0);
   };
+
+  handleNextPage = async () => {
+    if (this.state.pageIncrementer < this.state.totalPages) {
+      var nextPage = this.state.pageIncrementer + 1;
+      var newApiUrl =
+        "https://api.unsplash.com/search/photos?client_id=WVMhgChtZLtfoKzyyOcdoIljo-qswtWcg7vPYCq0R-A&page=" +
+        nextPage +
+        "&per_page=30&query=" +
+        this.state.mainQuery;
+
+      let res = await await (await axios.get(newApiUrl)).data;
+      this.setState({
+        listOfImageSources: res.results,
+        pageIncrementer: nextPage,
+        title:
+          "showing " +
+          res.total +
+          " results of " +
+          this.state.mainQuery +
+          " ( " +
+          res.total_pages +
+          "pages ) (page " +
+          nextPage +
+          ")",
+      });
+      var Y = document.getElementById("titleOfSearch").offsetTop;
+      window.scrollTo(0, Y);
+    } else {
+      this.setState({ pageIncrementer: 0 });
+    }
+  };
+
   render() {
     return (
       <div>
@@ -88,7 +184,6 @@ class App extends React.Component {
             </a>
           </div>
         </div>
-
         <img
           className="websiteTitle"
           src="https://images.cooltext.com/5590762.png"
@@ -96,9 +191,8 @@ class App extends React.Component {
           height="104"
           alt="Simple Wallpaper"
         />
-
         <br />
-
+        {/* //////////////////////////////// header end and start of the input ////////////////////////////////////////////////*/}
         <br />
         <input
           type="text"
@@ -109,130 +203,36 @@ class App extends React.Component {
         />
         <br />
         <Button
-          handleClick={this.getJsonList}
-          query={this.state.searchedValue}
+          handleClick={() => this.getJsonListOfImages(this.state.searchedValue)}
         />
         <br />
-        <CategorieBar
-          categorieName="cars"
-          onClick={() => this.getJsonList("cars")}
-        />
-        <CategorieBar
-          categorieName="animals"
-          onClick={() => {
-            this.getJsonList("animals");
-          }}
-        />
-        <CategorieBar
-          categorieName="anime"
-          onClick={() => this.getJsonList("anim")}
-        />
-        <CategorieBar
-          categorieName="brands"
-          onClick={() => this.getJsonList("brands")}
-        />
-        <CategorieBar
-          categorieName="cartoons"
-          onClick={() => this.getJsonList("cartoons")}
-        />
-        <CategorieBar
-          categorieName="celebrities"
-          z
-          onClick={() => this.getJsonList("celebrities")}
-        />
-        <CategorieBar
-          categorieName="devices"
-          onClick={() => this.getJsonList("devices")}
-        />
-        <CategorieBar
-          categorieName="games"
-          onClick={() => this.getJsonList("games")}
-        />
-        <CategorieBar
-          categorieName="movies"
-          onClick={() => this.getJsonList("movies")}
-        />
-        <CategorieBar
-          categorieName="music"
-          onClick={() => this.getJsonList("music")}
-        />
-        <CategorieBar
-          categorieName="geography"
-          onClick={() => this.getJsonList("geography")}
-        />
-        <CategorieBar
-          categorieName="art"
-          onClick={() => this.getJsonList("art")}
-        />
-        <CategorieBar
-          categorieName="nature"
-          onClick={() => this.getJsonList("nature")}
-        />
-        <CategorieBar
-          categorieName="other"
-          onClick={() => this.getJsonList("other")}
-        />
-        <CategorieBar
-          categorieName="pokemon"
-          onClick={() => this.getJsonList("pokemon")}
-        />
-        <CategorieBar
-          categorieName="art"
-          onClick={() => this.getJsonList("art")}
-        />
-        <CategorieBar
-          categorieName="4K"
-          onClick={() => this.getJsonList("4K")}
-        />
-        <CategorieBar
-          categorieName="religion"
-          onClick={() => this.getJsonList("religion")}
-        />
-        <CategorieBar
-          categorieName="resolutions"
-          onClick={() => this.getJsonList("resolutions")}
-        />
-        <CategorieBar
-          categorieName="space"
-          onClick={() => this.getJsonList("space")}
-        />
-        <CategorieBar
-          categorieName="sports"
-          onClick={() => this.getJsonList("sports")}
-        />
-        <CategorieBar
-          categorieName="superheroes"
-          onClick={() => this.getJsonList("superheroes")}
-        />
-        <CategorieBar
-          categorieName="tvShows"
-          onClick={() => this.getJsonList("tvshows")}
-        />
-        <CategorieBar
-          categorieName="iphone"
-          onClick={() => this.getJsonList("iphone")}
-        />
+        {/* //////////////////////////////// start of categorie CARDS  ////////////////////////////////////////////////*/}
         <hr />
         <div className="app">
           <MovieCard
-            data={this.state.list}
+            data={this.state.categories}
             handleClick={this.getJsonListOfImages}
           />
         </div>
-        <h1 id="titleOfSearch">
-          {this.state.title.replace(/-/g, " ").replace("/", "")}{" "}
-        </h1>
-        {this.state.listOfImageSources.map((image) => {
-          let link = image.replace("https://wallpapercave.com/w/", "");
-          link = link.replace(".jpg", "");
+        {/* //////////////////////////////// title of search  ////////////////////////////////////////////////*/}
+        <h1 id="titleOfSearch">{this.state.title}</h1>
+        {/* //////////////////////////////// loop that generate images ////////////////////////////////////////////////*/}
+        {this.state.listOfImageSources.map((imageObj) => {
+          let imgHref = imageObj.urls.regular;
+          let downloadLink = imageObj.links.html + "/download?force=true";
+
           return (
             <div>
-              <Image src={image} download={this.state.DownloadLink + link} />
+              <Image src={imgHref} download={downloadLink} />
             </div>
           );
         })}
+        {/* //////////////////////////////// scroll up button ////////////////////////////////////////////////*/}
         <button className="UpBtn" onClick={this.handleUpClick}>
           Scroll Up
+        </button>
+        <button className="UpBtn" onClick={this.handleNextPage}>
+          next page
         </button>
       </div>
     );

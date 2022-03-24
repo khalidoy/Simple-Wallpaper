@@ -3,17 +3,12 @@ import "./Image.css";
 class Image extends React.Component {
   render() {
     return (
-      <div
-        className="imgBigDiv"
-        onClick={() => window.open(this.props.src, "_blank")}
-      >
+      <div className="imgBigDiv">
         <img
           className="img"
           alt="test"
           src={this.props.src}
-          onError={async (e) => {
-            e.target.parentNode.remove();
-          }}
+          onClick={() => window.open(this.props.src, "_blank")}
         />
         <br />
 

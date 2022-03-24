@@ -20,7 +20,7 @@ h1 {
   text-align: center;
   margin: 0 auto;
   padding: 2%;
-  font-size: 480%;
+  font-size: 300%;
   color: #ffffffe8;
   font-family: Roundhand, cursive;
   text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -170,7 +170,7 @@ h1:hover {
   border-color: transparent;
   background-color: rgb(90, 240, 153);
   transition: transform 0.5s cubic-bezier(0.235, 0, 0.05, 0.95);
-  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
+  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #000000);
   font-family: Roundhand, cursive;
   border-radius: 50px;
   width: 7%;

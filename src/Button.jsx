@@ -8,7 +8,7 @@ class Button extends React.Component {
       <button
         className="bn3637 bn37"
         onClick={() => {
-          this.props.handleClick(this.props.query);
+          this.props.handleClick();
         }}
       >
         SEARCH

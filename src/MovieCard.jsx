@@ -11,14 +11,14 @@ class MovieCard extends React.Component {
               <td key={id}>
                 <button
                   onClick={() => {
-                    this.props.handleClick(categorieDiv.href);
+                    this.props.handleClick(categorieDiv.name);
                   }}
                 >
                   <div class="myCard" key={id}>
-                    <h3 class="title">{categorieDiv.title} </h3>
+                    <h3 class="title">{categorieDiv.name} </h3>
                     <img
                       class="categorieDivIMG"
-                      src={categorieDiv.img}
+                      src={categorieDiv.imghref}
                       alt="loading ..."
                     />
                   </div>
