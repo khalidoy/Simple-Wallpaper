@@ -1,7 +1,6 @@
 .bn3637 {
   display: inline-flex;
   padding: 0.5%;
-  font-family: "Poppins", sans-serif;
   font-size: 110%;
   color: rgb(113, 218, 139);
   border-radius: 50px;
@@ -16,8 +15,7 @@
   background-color: rgb(90, 240, 153);
   color: rgb(48, 11, 11);
   transition: transform 0.5s cubic-bezier(0.235, 0, 0.05, 0.95);
-  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
-  font-family: Snell Roundhand, cursive;
+  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #000000);
   border: solid;
 }
 

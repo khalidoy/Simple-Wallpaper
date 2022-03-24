@@ -8,13 +8,12 @@
   border-width: 1px;
 }
 .myCard:hover {
-  background-color: hsla(96, 100%, 82%, 0.801);
+  background-color: hsla(101, 100%, 50%, 0.801);
   -webkit-transition: background-color 200ms linear;
   -ms-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
   transform: perspective(3px) scale3d(1.05, 1.05, 1) translateZ(0) !important;
-  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #2bff00);
-
+  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 20px #ffffff);
   cursor: pointer;
 }
 .title {

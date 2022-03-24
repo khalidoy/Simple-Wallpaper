@@ -309,6 +309,24 @@ class App extends React.Component {
         </div>
         {/* //////////////////////////////// title of search  ////////////////////////////////////////////////*/}
         <h1 id="titleOfSearch">{this.state.title}</h1>
+        <a
+          className="enjoy"
+          href="https://khalidoy.github.io/Simple-Wallpaper/"
+          onClick={(evt) => {
+            evt.preventDefault();
+            evt.target.innerHTML = "copied to clipboard !";
+            navigator.clipboard
+              .writeText(evt.target.getAttribute("href"))
+              .then(() => {
+                console.log("copied");
+              });
+          }}
+        >
+          Click here
+        </a>
+        <br />
+        <br />
+        <p>to share this website if you like</p>
         {/* //////////////////////////////// loop that generate images ////////////////////////////////////////////////*/}
         {this.state.listOfImageSources.map((imageObj) => {
           let imgHref = imageObj.urls.regular;
@@ -330,7 +348,7 @@ class App extends React.Component {
         <br />
         {/* //////////////////////////////// prev page button ////////////////////////////////////////////////*/}
         <button className="UpBtn" onClick={this.handlePreviousPage}>
-          Previous page
+          Prev page
         </button>
         {/* //////////////////////////////// scroll up button ////////////////////////////////////////////////*/}
         <button className="UpBtn" onClick={this.handleUpClick}>
