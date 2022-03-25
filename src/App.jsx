@@ -10,35 +10,44 @@ class App extends React.Component {
   state = {
     categories: [
       {
+        name: "iphone wallpapers",
+        imghref:
+          "https://images.unsplash.com/photo-1547496832-84e64458210a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+      },
+      {
+        name: "Android wallpapers",
+        imghref:
+          "https://images.unsplash.com/photo-1492760864391-753aaae87234?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+      },
+      {
         name: "Cartoon",
         imghref:
           "https://images.unsplash.com/photo-1620336655055-088d06e36bf0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGNhcnRvb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
       },
-
+      {
+        name: "Poster",
+        imghref:
+          "https://images.unsplash.com/photo-1588438621836-9d7f88b0cd96?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHBvc3RlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      },
       {
         name: "Nature",
         imghref:
           "https://img.freepik.com/photos-gratuite/prise-vue-au-grand-angle-seul-arbre-poussant-sous-ciel-assombri-pendant-coucher-soleil-entoure-herbe_181624-22807.jpg",
       },
-      { name: "art", imghref: "https://wallpaperaccess.com/full/1151322.jpg" },
-      {
-        name: "android wallpapers",
-        imghref:
-          "https://images.unsplash.com/photo-1492760864391-753aaae87234?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
-      },
+      { name: "Art", imghref: "https://wallpaperaccess.com/full/1151322.jpg" },
 
       {
-        name: "texture and patterns wallpapers",
+        name: "Texture & Patterns",
         imghref:
           "https://images.unsplash.com/photo-1647092076255-6c9e7b773ea2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDYzfGlVSXNuVnRqQjBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       },
       {
-        name: "backrounds",
+        name: "Backrounds",
         imghref:
           "https://images.unsplash.com/photo-1499088513455-78ed88b7a5b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
       },
       {
-        name: "color wallpaper",
+        name: "Color wallpaper",
         imghref:
           "https://media.istockphoto.com/photos/colored-powder-explosion-on-white-background-picture-id1132442970?b=1&k=20&m=1132442970&s=170667a&w=0&h=qZU1t7UPVUZanRUaPIrTa0IJejHGrNQldpWTl_v92M0=",
       },
@@ -58,7 +67,7 @@ class App extends React.Component {
           "https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGJsYWNrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       },
       {
-        name: "cars wallpaper",
+        name: "Cars wallpapers",
         imghref: "https://i.insider.com/592f4169b74af41b008b5977?width=700",
       },
       {
@@ -92,39 +101,30 @@ class App extends React.Component {
           "https://images.unsplash.com/photo-1529912626516-e58b23f44f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTV8fGluZGllJTIwd2FsbHBhcGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       },
       {
-        name: "animals",
+        name: "Animals",
         imghref:
           "https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
       },
       {
-        name: "cool wallpapers",
+        name: "Cool wallpapers",
         imghref:
           "https://media.istockphoto.com/photos/circle-audio-wave-picture-id1305272283?b=1&k=20&m=1305272283&s=170667a&w=0&h=D0Xv0LkCtWtWGGCJSRtfNYc3PxylaSFi_VS1GMhcduk=",
       },
       {
-        name: "wallpapers",
+        name: "Wallpapers",
         imghref:
           "https://images.unsplash.com/photo-1551505593-8b841137e9ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTB8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       },
       {
-        name: "desktop wallpapers",
+        name: "Desktop wallpapers",
         imghref:
           "https://images.unsplash.com/photo-1431440869543-efaf3388c585?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
       },
+
       {
-        name: "iphone wallpaper",
-        imghref:
-          "https://images.unsplash.com/photo-1547496832-84e64458210a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
-      },
-      {
-        name: "space",
+        name: "Space",
         imghref:
           "https://media.istockphoto.com/photos/background-of-galaxy-and-stars-picture-id1035676256?b=1&k=20&m=1035676256&s=170667a&w=0&h=NOtiiFfDhhUhZgQ4wZmHPXxHvt3RFVD-lTmnWCeyIG4=",
-      },
-      {
-        name: "poster",
-        imghref:
-          "https://images.unsplash.com/photo-1588438621836-9d7f88b0cd96?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHBvc3RlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
       },
     ],
     searchedValue: "",
@@ -279,11 +279,10 @@ class App extends React.Component {
         </div>
         <img
           className="websiteTitle"
-          src="https://images.cooltext.com/5590762.png"
-          width="738"
-          height="104"
-          alt="Simple Wallpaper"
-        />
+          src="https://blog.flamingtext.com/blog/2022/03/25/flamingtext_com_1648243112_422627643.png"
+          alt="wallpaper simple"
+        ></img>
+
         <br />
         {/* //////////////////////////////// header end and start of the input ////////////////////////////////////////////////*/}
         <br />
@@ -298,7 +297,7 @@ class App extends React.Component {
         <Button
           handleClick={() => this.getJsonListOfImages(this.state.searchedValue)}
         />
-        <br />
+
         {/* //////////////////////////////// start of categorie CARDS  ////////////////////////////////////////////////*/}
         <hr />
         <div className="app">
