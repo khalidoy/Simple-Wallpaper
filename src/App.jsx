@@ -345,7 +345,7 @@ class App extends React.Component {
           let downloadLink = imageObj.links.html + "/download?force=true";
           let likes = imageObj.likes;
           let author = imageObj.user.name;
-
+          let description = imageObj.alt_description || imageObj.description;
           return (
             <div>
               <Image
@@ -353,6 +353,7 @@ class App extends React.Component {
                 download={downloadLink}
                 likes={likes}
                 author={author}
+                description={description}
               />
             </div>
           );

@@ -1,33 +1,48 @@
-.imgBigDiv {
-  width: 95%;
-  height: 850px;
-  font-family: Arial;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  color: #333333;
-  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
-  margin: 0 auto;
-  margin-top: 90px;
-}
-
-.imgBigDiv:hover {
-  cursor: pointer;
-}
-
 .img {
-  width: 70%;
-  height: 90%;
+  position: relative;
+  height: 720px;
   border-radius: 20px;
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   transition: transform 0.5s cubic-bezier(0.235, 0, 0.05, 0.95);
   border-style: none;
   background-image: url("https://c.tenor.com/I6kN-6X7nhAAAAAi/loading-buffering.gif");
   background-position: center;
-  background-size: 15%;
+  background-size: 30%;
   background-repeat: no-repeat;
   border: solid;
+  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
+  z-index: 0;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.downloadIcon {
+  width: 10%;
+  position: absolute;
+  display: inline;
+  right: 45%;
+  top: 55%;
+  z-index: 2;
+  animation: fadeInAnimation 0.5s;
+}
+.imageDiv {
+  position: relative;
+  border: solid;
+  width: 85%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.parentOfDownloadIcon {
+  position: relative;
 }
 
 .img:hover {
@@ -39,12 +54,12 @@
   font-weight: 400px;
   color: #030303;
   background-color: rgba(255, 255, 255, 0.658);
-  border-radius: 10px;
+  border-radius: 50px;
   filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
-  padding: 0.5%;
-  margin: 0 auto;
   border: solid;
   border-width: 2px;
+  padding: 2px;
+  display: inline-block;
 }
 
 .donwloadBTN:hover {
@@ -52,68 +67,83 @@
   filter: drop-shadow(7.071067811865475px 7.0710678118654755px 10px #ffffff);
 }
 
+.description {
+  font-size: 110%;
+  text-decoration: overline;
+}
+
 hr {
-  width: 100% !important;
-  margin-top: 5%;
+  width: 90% !important;
+  margin-top: 1%;
   filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #080808);
-  height: 0.5px;
+  height: 0.1px;
   background-color: #000000;
   border-radius: 50px;
   text-align: center;
 }
 
 .likeIcon {
-  width: 1.5%;
-  height: 3%;
-  margin-left: 5.5%;
-  margin-right: 1%;
+  width: 2% !important;
+  display: inline-block;
+  top: 0;
+  transition: transform 0.5s cubic-bezier(0.235, 0, 0.05, 0.95);
+  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
+}
+.likeIcon:hover {
+  transform: perspective(1px) scale3d(1.2, 1.2, 1.2) translateZ(0) !important;
 }
 
 .author {
-  margin-right: 5%;
   font-size: 90%;
   border: solid;
   border-radius: 20px;
   border-width: 1px;
-  padding: 2px;
+  display: inline-block;
+  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
 }
 
 .imageMetaData {
-  text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 4px;
+  display: block;
+  width: 20%;
 }
 @media screen and (max-width: 375px) {
-  .author {
-    font-size: 100%;
-    display: block;
-    align-self: auto;
-    border: solid;
-    border-width: 1px;
-    margin: 0 auto;
-    margin-bottom: 5%;
-  }
   .likeIcon {
-    width: 5%;
-    height: 3%;
-    display: block;
-    margin: 0 auto;
-    margin-top: 5%;
+    width: 5% !important;
+    display: inline-block;
+    top: 0;
   }
+
+  .author {
+    font-size: 90%;
+    border: solid;
+    border-radius: 20px;
+    border-width: 1px;
+    display: inline-block;
+  }
+
+  .imageMetaData {
+    margin: 0 auto 4px;
+    display: block;
+    width: 40%;
+  }
+
   .donwloadBTN {
-    font-size: 150%;
+    font-size: 30px;
+    font-weight: 400px;
     color: #030303;
     background-color: rgba(255, 255, 255, 0.658);
-    border-radius: 20px;
+    border-radius: 10px;
     filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
-    padding: 1%;
-    margin: 0 auto;
     border: solid;
     border-width: 2px;
+    padding: 2px;
+    display: inline-block;
   }
 
   .img {
-    width: 100%;
-    height: 90%;
+    width: 97%;
+    height: 708px;
     border-radius: 20px;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -124,15 +154,9 @@ hr {
     background-repeat: no-repeat;
     border: solid;
   }
-  .imgBigDiv {
-    width: 98%;
-    height: 850px;
-    font-family: Arial;
-    font-size: 14px;
-    text-align: center;
-    color: #333333;
-    filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
-    margin: 0 auto;
-    margin-top: 130px;
+  .description {
+    font-family: Snell Roundhand, cursive;
+    font-size: 150%;
+    font-weight: bold;
   }
 }
