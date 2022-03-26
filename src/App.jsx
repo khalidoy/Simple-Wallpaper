@@ -4,8 +4,8 @@ import MovieCard from "./MovieCard";
 import Button from "./Button";
 import "./App.css";
 import Image from "./Image";
-import CategorieBar from "./CategorieBar";
 
+// variables in the site
 class App extends React.Component {
   state = {
     categories: [
@@ -137,7 +137,7 @@ class App extends React.Component {
     apiUrlCall:
       "https://api.unsplash.com/search/photos?client_id=WVMhgChtZLtfoKzyyOcdoIljo-qswtWcg7vPYCq0R-A&page=1&per_page=30&query=",
   };
-
+  //when loading the page
   componentDidMount = () => {
     var myfn = this.getJsonListOfImages;
     var input = document.getElementById("myInput");
@@ -148,6 +148,7 @@ class App extends React.Component {
     });
   };
 
+  //get the images after clicking on a categorie
   getJsonListOfImages = async (query) => {
     let res = await await (await axios.get(this.state.apiUrlCall + query)).data;
     console.log(res);
@@ -170,15 +171,18 @@ class App extends React.Component {
     window.scrollTo(0, Y);
   };
 
+  // when you type something on search bar , this function get the input in reel time
   handleChange = (e) => {
     const value = e.target.value;
     this.setState({ searchedValue: value });
   };
 
+  //when you click on scroll up button
   handleUpClick = () => {
     window.scroll(0, 0);
   };
 
+  // when you click on next page
   handleNextPage = async () => {
     if (this.state.pageIncrementer < this.state.totalPages) {
       var nextPage = this.state.pageIncrementer + 1;
@@ -210,6 +214,7 @@ class App extends React.Component {
     }
   };
 
+  // when you click on previous page
   handlePreviousPage = async () => {
     if (this.state.pageIncrementer > 1) {
       var nextPage = this.state.pageIncrementer - 1;
@@ -241,51 +246,54 @@ class App extends React.Component {
     }
   };
 
+  // ----------------------------RENDER FUNCTION---------------------------------------------------------------
   render() {
     return (
       <div>
-        <div className="header">
-          <p className="about">by khalid yakhloufi</p>
-          <div className="contact" id="social-platforms">
-            <a
-              class="btn btn-icon btn-facebook"
-              href="https://fr-fr.facebook.com/yakhloufi.khalid"
-            >
-              <i class="fa fa-facebook"></i>
-              <span>Facebook</span>
-            </a>
-            <a
-              class="btn btn-icon btn-twitter"
-              href="https://fr-fr.facebook.com/yakhloufi.khalid"
-            >
-              <i class="fa fa-twitter"></i>
-              <span>Twitter</span>
-            </a>
-            <a
-              class="btn btn-icon btn-googleplus"
-              href="https://fr-fr.facebook.com/yakhloufi.khalid"
-            >
-              <i class="fa fa-google-plus"></i>
-              <span>Google+</span>
-            </a>
-            <a
-              class="btn btn-icon btn-pinterest"
-              href="https://fr-fr.facebook.com/yakhloufi.khalid"
-            >
-              <i class="fa fa-pinterest"></i>
-              <span>Pinterest</span>
-            </a>
-          </div>
+        {/* //////////////////////////////// header of the page ////////////////////////////////////////////////*/}
+
+        {/* //////////////////////////////// by khalid yakhloufi text ////////////////////////////////////////////////*/}
+        <p className="about">by khalid yakhloufi</p>
+        {/* //////////////////////////////// social media links and icons ////////////////////////////////////////////////*/}
+        <div className="contact">
+          <a href="https://fr-fr.facebook.com/yakhloufi.khalid">
+            <img
+              className="socialMediaIcon"
+              src="https://cdn-icons-png.flaticon.com/512/1077/1077041.png"
+              alt="facebook"
+            />
+          </a>
+          <a href="https://github.com/khalidoy">
+            <img
+              className="socialMediaIcon"
+              src="https://cdn-icons-png.flaticon.com/512/1051/1051377.png"
+              alt="github"
+            />
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=+212651760843">
+            <img
+              className="socialMediaIcon"
+              src="https://cdn-icons-png.flaticon.com/512/1384/1384095.png"
+              alt="whatsapp"
+            />
+          </a>
+          <a href="mailto:kyakhloufi@gmail.com">
+            <img
+              className="socialMediaIcon"
+              src="https://cdn-icons-png.flaticon.com/512/1782/1782712.png"
+              alt="gmail"
+            />
+          </a>
         </div>
+        {/* //////////////////////////////// website big title ////////////////////////////////////////////////*/}
+        <br />
+        <br />
         <img
-          className="websiteTitle"
+          className="websiteTitle fade-in"
           src="https://blog.flamingtext.com/blog/2022/03/25/flamingtext_com_1648243112_422627643.png"
           alt="wallpaper simple"
         ></img>
-
-        <br />
-        {/* //////////////////////////////// header end and start of the input ////////////////////////////////////////////////*/}
-        <br />
+        {/* //////////////////////////////// search input box ////////////////////////////////////////////////*/}
         <input
           type="text"
           id="myInput"
@@ -294,11 +302,11 @@ class App extends React.Component {
           onChange={this.handleChange}
         />
         <br />
+        {/* //////////////////////////////// search button ////////////////////////////////////////////////*/}
         <Button
           handleClick={() => this.getJsonListOfImages(this.state.searchedValue)}
         />
-
-        {/* //////////////////////////////// start of categorie CARDS  ////////////////////////////////////////////////*/}
+        {/* //////////////////////////////// categorie CARDS  ////////////////////////////////////////////////*/}
         <hr />
         <div className="app">
           <MovieCard
@@ -306,13 +314,15 @@ class App extends React.Component {
             handleClick={this.getJsonListOfImages}
           />
         </div>
+
         {/* //////////////////////////////// title of search  ////////////////////////////////////////////////*/}
         <h1 id="titleOfSearch">{this.state.title}</h1>
-        <br />
-        <br />
+
+        {/* //////////////////////////////// copied to clipboard button ////////////////////////////////////////////////*/}
+
         <a
           className="enjoy"
-          href="https://khalidoy.github.io/Simple-Wallpaper/"
+          href="https://wallpapersimple.com"
           onClick={(evt) => {
             evt.preventDefault();
             evt.target.innerHTML = "copied to clipboard !";
@@ -325,9 +335,10 @@ class App extends React.Component {
         >
           Click here
         </a>
-        <br />
-        <br />
         <p>to share this website if you like</p>
+        <br />
+        <br />
+
         {/* //////////////////////////////// loop that generate images ////////////////////////////////////////////////*/}
         {this.state.listOfImageSources.map((imageObj) => {
           let imgHref = imageObj.urls.regular;
@@ -346,12 +357,13 @@ class App extends React.Component {
             </div>
           );
         })}
-        <br />
+
         {/* //////////////////////////////// prev page button ////////////////////////////////////////////////*/}
         <button className="UpBtn" onClick={this.handlePreviousPage}>
           Prev page
         </button>
         {/* //////////////////////////////// scroll up button ////////////////////////////////////////////////*/}
+
         <button className="UpBtn" onClick={this.handleUpClick}>
           Scroll Up
         </button>

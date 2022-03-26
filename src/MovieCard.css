@@ -1,9 +1,8 @@
 .myCard {
-  background-color: rgba(236, 236, 236, 0.219);
-  align-content: center;
-  border-radius: 15px;
-  padding-right: 10px;
-  margin: 6px;
+  background-color: rgba(202, 202, 202, 0.11);
+  border-radius: 20px;
+  padding-right: 8px;
+  margin: 5px;
   border: solid;
   border-width: 1px;
 }
@@ -13,18 +12,18 @@
   -ms-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
   transform: perspective(3px) scale3d(1.05, 1.05, 1) translateZ(0) !important;
-  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 20px #ffffff);
+  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 20px #56ff9d);
   cursor: pointer;
 }
 .title {
   width: 136.36720275878906px;
-  height: 15px;
+
+  height: 8px;
   font-family: Corbel;
-  font-size: 20px;
-  padding-bottom: 40px;
+  font-size: 18px;
+  padding-bottom: 19px;
   font-weight: 400;
   color: #000000;
-  text-decoration: wavy;
   filter: drop-shadow(10.071067811865475px 10.0710678118654755px 5px #000000);
 }
 a:link {
@@ -35,34 +34,31 @@ a:link {
   width: 120px;
   height: 120px;
   border-radius: 20px;
-  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
+  filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #3d3d3d);
 }
 
 @media screen and (max-width: 375px) {
   .myCard {
-    background-color: rgba(255, 255, 255, 0.219);
-    border-radius: 15px;
-    padding-right: 10px;
-    margin: 6px;
-    width: 100px;
+    background-color: rgba(255, 255, 255, 0.274);
+    border-radius: 20px;
+    margin: 15px;
+    width: 110px;
     border: solid;
     border-width: 1px;
   }
   .categorieDivIMG {
-    width: 90px;
-    height: 70px;
+    width: 90%;
+    height: 95px;
     border-radius: 20px;
-    filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #404040);
   }
   .title {
-    width: 20.36720275878906%;
-    height: 10px;
+    width: 90%;
     font-family: Corbel;
     font-size: 20px;
     padding-bottom: 30px;
     color: #000000;
-    text-decoration: wavy;
-    filter: drop-shadow(10.071067811865475px 10.0710678118654755px 5px #000000);
-    margin-left: 4px;
+    margin: auto;
+    margin-bottom: 25px;
+    margin-top: 8px;
   }
 }
