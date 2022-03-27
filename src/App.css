@@ -1,13 +1,6 @@
 @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 
-@keyframes slidein {
-  0% {
-    margin-top: 300px;
-    opacity: 0;
-  }
-}
-
 .App {
   text-align: center;
 }
@@ -92,8 +85,8 @@ h1:hover {
   filter: drop-shadow(7.071067811865475px 7.0710678118654755px 5px #000000);
   transition: transform 0.5s cubic-bezier(0.235, 0, 0.05, 0.95);
   width: 70%;
-  animation: slidein 1s;
 }
+
 .enjoy {
   font-size: 200%;
   border: solid;

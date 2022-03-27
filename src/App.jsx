@@ -67,7 +67,7 @@ class App extends React.Component {
           "https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGJsYWNrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       },
       {
-        name: "Cars wallpapers",
+        name: "Cars",
         imghref: "https://i.insider.com/592f4169b74af41b008b5977?width=700",
       },
       {
@@ -150,6 +150,7 @@ class App extends React.Component {
 
   //get the images after clicking on a categorie
   getJsonListOfImages = async (query) => {
+    this.setState({ listOfImageSources: [] });
     let res = await await (await axios.get(this.state.apiUrlCall + query)).data;
     console.log(res);
     this.setState({
@@ -184,6 +185,7 @@ class App extends React.Component {
 
   // when you click on next page
   handleNextPage = async () => {
+    this.setState({ listOfImageSources: [] });
     if (this.state.pageIncrementer < this.state.totalPages) {
       var nextPage = this.state.pageIncrementer + 1;
       var newApiUrl =
@@ -216,6 +218,7 @@ class App extends React.Component {
 
   // when you click on previous page
   handlePreviousPage = async () => {
+    this.setState({ listOfImageSources: [] });
     if (this.state.pageIncrementer > 1) {
       var nextPage = this.state.pageIncrementer - 1;
       var newApiUrl =
